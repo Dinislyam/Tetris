@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Tetris
 {
-    class Line
+    enum Direction
     {
+        LEFT, RIGHT ,DOWN
     }
 }
