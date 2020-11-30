@@ -10,68 +10,25 @@ namespace Tetris
             Console.SetWindowSize(40, 30);
             Console.SetBufferSize(40, 30);
 
-            Square s = new Square(10, 0, '#');
+            Figure s = new Stick(10, 0, '#');
             s.Draw();
 
-            Thread.Sleep(50);
+            Thread.Sleep(500);
             s.Hide();
             s.Move(Direction.DOWN);
             s.Draw();
-            Thread.Sleep(50);
+
+            Thread.Sleep(500);
             s.Hide();
-            s.Move(Direction.DOWN);
-            s.Draw(); Thread.Sleep(50);
-            s.Hide();
-            s.Move(Direction.DOWN);
-            s.Draw(); Thread.Sleep(50);
-            s.Hide();
-            s.Move(Direction.DOWN);
-            s.Draw(); Thread.Sleep(50);
-            s.Hide();
-            s.Move(Direction.DOWN);
-            s.Draw(); Thread.Sleep(50);
-            s.Hide();
-            s.Move(Direction.DOWN);
-            s.Draw(); Thread.Sleep(50);
-            s.Hide();
-            s.Move(Direction.DOWN);
-            s.Draw(); Thread.Sleep(50);
-            s.Hide();
-            s.Move(Direction.DOWN);
-            s.Draw(); Thread.Sleep(50);
-            s.Hide();
-            s.Move(Direction.DOWN);
-            s.Draw(); Thread.Sleep(50);
-            s.Hide();
-            s.Move(Direction.DOWN);
-            s.Draw(); Thread.Sleep(50);
-            s.Hide();
-            s.Move(Direction.DOWN);
-            s.Draw(); Thread.Sleep(50);
-            s.Hide();
-            s.Move(Direction.DOWN);
-            s.Draw(); Thread.Sleep(50);
-            s.Hide();
-            s.Move(Direction.DOWN);
-            s.Draw(); Thread.Sleep(50);
-            s.Hide();
-            s.Move(Direction.DOWN);
-            s.Draw(); Thread.Sleep(50);
-            s.Hide();
-            s.Move(Direction.DOWN);
-            s.Draw(); Thread.Sleep(50);
-            s.Hide();
-            s.Move(Direction.DOWN);
-            s.Draw(); Thread.Sleep(50);
-            s.Hide();
-            s.Move(Direction.DOWN);
-            s.Draw(); Thread.Sleep(50);
-            s.Hide();
-            s.Move(Direction.DOWN);
-            s.Draw(); Thread.Sleep(50);
-            s.Hide();
-            s.Move(Direction.DOWN);
+            s.Rotate();
             s.Draw();
+
+            Thread.Sleep(500);
+            s.Hide();
+            s.Rotate();
+            s.Draw();
+
+
             Console.ReadLine();
         }
         
