@@ -38,7 +38,7 @@ namespace Tetris
                     x += 1;
                     break;
                 case Direction.LEFT:
-                    x += 1;
+                    x -= 1;
                     break;
             }
         }
