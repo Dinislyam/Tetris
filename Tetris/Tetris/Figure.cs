@@ -40,7 +40,7 @@ namespace Tetris
                 p.Move(dir);
             }
         }
-        public abstract void Rotate();
+        public abstract void Rotate(Point[] plist);
 
         internal void TryMove(Direction dir)
         {
@@ -61,6 +61,17 @@ namespace Tetris
                     return false;
             }
             return true;
+        }
+
+        internal void TryRotate()
+        {
+            Hide();
+            var clone = Clone();
+            Rotate(clone);
+            if (VerifyPosition(clone))
+                points = clone;
+
+            Draw();
         }
 
         private Point[] Clone()
