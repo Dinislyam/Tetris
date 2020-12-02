@@ -12,7 +12,7 @@ namespace Tetris
 
 
 
-            var generator = new FigureGenerator(20, 0, '*');
+            var generator = new FigureGenerator(Field.Width / 2, 0, Drawer.DEFAULT_SYMBOL);
             Figure currentFigure = generator.GetNewFigure();
 
             while (true)
@@ -28,15 +28,18 @@ namespace Tetris
 
         private static bool ProcessResult(Result result, ref Figure currentFigure)
         {
-            var generator = new FigureGenerator(20, 0, '*');
+
+            var generator = new FigureGenerator(Field.Width / 2, 0, Drawer.DEFAULT_SYMBOL);
             if (result == Result.HEAP_STRIKE || result == Result.DOWN_BORDER_STRIKE)
             {
                 Field.AddFigure(currentFigure);
+                Field.TryDeleteLines();
                 currentFigure = generator.GetNewFigure();
                 return true;
             }
             else
                 return false;
+
         }
 
         private static Result HandleKey(Figure f, ConsoleKey key)
